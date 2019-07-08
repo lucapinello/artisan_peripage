@@ -57,8 +57,8 @@ def print_report(pdf_filename='artisan_report_with_padding.pdf'):
            '-dDEVICEWIDTHPOINTS=164.41 ' \
            '-dDEVICEHEIGHTPOINTS=595.28 ' \
            '-dQueryUser=3 ' \
-           '-c "<</PageOffset [-135 0]  /Margins [0 -30] /.HWMargins [0 10 0 0] >> setpagedevice" -f '\
-           ' -sOutputFile="\\\\spool\\Peri" '
+           '-c "<</PageOffset [-135 0]  /Margins [0 -30] /.HWMargins [0 10 0 0] >> setpagedevice" -f ' #\
+           #' -sOutputFile="\\\\spool\\Peri" '
     ghostscript = args + os.path.join(os.getcwd(), pdf_filename).replace('\\', '\\\\')
     print(ghostscript)
     subprocess.call(ghostscript, shell=True)
